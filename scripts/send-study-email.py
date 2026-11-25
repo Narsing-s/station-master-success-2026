@@ -293,7 +293,7 @@ def main():
         "<hr style='border:0;border-top:1px solid #dce3ee'>",
         "<h2 style='margin:18px 0 8px'>Quick answer table / సమాధానాల పట్టిక (spoiler)</h2>",
         "<p style='font-size:12px;color:#52657c'>Answers are listed here for quick access; detailed explanations follow the questions. / సమాధానాలు ఇక్కడ ఉన్నాయి.</p>",
-        "<table role='table' cellpadding='7' cellspacing='0' style='width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px'><thead><tr style='background:#e8f0fa'><th align='left'>Question</th><th align='left'>Correct answer</th></tr></thead><tbody>",
+        "<table role='table' cellpadding='7' cellspacing='0' style='width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px'><thead><tr style='background:#e8f0fa'><th align='left'>Question</th><th align='left'>Correct answer</th><th align='left'>Explanation / వివరణ</th></tr></thead><tbody>",
     ]
     plain = [
         "STATION MASTER SUCCESS 2026",
@@ -306,8 +306,10 @@ def main():
 
     for i, q in enumerate(questions, 1):
         letters, answer_text = answer_label(q)
-        parts.append(f"<tr style='border-bottom:1px solid #dce3ee'><td>Q{i:03d}</td><td><b>{html.escape(letters)}</b> — {html.escape(answer_text)}</td></tr>")
+        why = q.get("why", "Review the relevant concept and verify the calculation.")
+        parts.append(f"<tr style='border-bottom:1px solid #dce3ee'><td>Q{i:03d}</td><td><b>{html.escape(letters)}</b> — {html.escape(answer_text)}</td><td style='line-height:1.5'>{html.escape(why)}</td></tr>")
         plain.append(f"Q{i:03d}: {letters} — {answer_text}")
+        plain.append(f"Explanation / వివరణ: {why}")
     parts.append("</tbody></table><hr style='border:0;border-top:1px solid #dce3ee'><h2 id='questions'>Questions / ప్రశ్నలు</h2>")
     plain.extend(["", "QUESTIONS / ప్రశ్నలు", ""])
     for i, q in enumerate(questions, 1):
