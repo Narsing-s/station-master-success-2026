@@ -39,8 +39,8 @@ msg = EmailMessage()
 msg["Subject"] = f"Station Master 2026 — 10 fresh questions — {now.strftime('%d %b %Y %H:%M %Z')}"
 msg["From"] = os.environ["STUDY_GMAIL_USER"]
 msg["To"] = os.environ.get("STUDY_TO_EMAIL", os.environ["STUDY_GMAIL_USER"])
-msg.set_content("\\n".join(plain))
-msg.add_alternative("\\n".join(parts), subtype="html")
+msg.set_content("\n".join(plain))
+msg.add_alternative("\n".join(parts), subtype="html")
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as server:
     server.login(os.environ["STUDY_GMAIL_USER"], os.environ["STUDY_GMAIL_APP_PASSWORD"])
     server.send_message(msg)
