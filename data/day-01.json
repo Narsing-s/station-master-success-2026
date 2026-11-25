@@ -1,12 +1,521 @@
 [
-  {"id":1,"subject":"Mathematics","q":"Which is the smallest prime number? / అతి చిన్న ప్రధాన సంఖ్య ఏది?","options":["1","2","3","4"],"answer":1,"why":"2 has exactly two positive factors: 1 and 2. / 2 కు 1, 2 అనే రెండు కారణాంకాలు ఉన్నాయి."},
-  {"id":2,"subject":"Mathematics","q":"Calculate: 35 + 25 − 10 = ? / లెక్కించండి.","options":["40","45","50","60"],"answer":2,"why":"35 + 25 = 60; 60 − 10 = 50."},
-  {"id":3,"subject":"Reasoning","q":"Find the next number: 5, 10, 15, 20, ? / తదుపరి సంఖ్యను కనుగొనండి.","options":["25","30","22","35"],"answer":0,"why":"The sequence increases by 5 each time. / ప్రతి సారి 5 కలుపుతున్నాం."},
-  {"id":4,"subject":"Mathematics","q":"Which number is divisible by 3? / 3 తో పూర్తిగా భాగించబడే సంఖ్య ఏది?","options":["124","125","126","127"],"answer":2,"why":"1 + 2 + 6 = 9, and 9 is divisible by 3."},
-  {"id":5,"subject":"Mathematics","q":"Calculate: 12 × 4 = ? / గుణించండి.","options":["36","42","48","52"],"answer":2,"why":"12 × 4 = 48."},
-  {"id":6,"subject":"Mathematics","q":"Select all even numbers. / సరి సంఖ్యలను ఎంచుకోండి.","options":["14","17","22","29"],"answers":[0,2],"why":"14 and 22 are divisible by 2 without a remainder."},
-  {"id":7,"subject":"Mathematics","q":"What is 100 ÷ 5? / భాగహారం చేయండి.","options":["10","15","20","25"],"answer":2,"why":"5 × 20 = 100, so 100 ÷ 5 = 20."},
-  {"id":8,"subject":"Mathematics","q":"Zero is a whole number. / సున్నా ఒక పూర్ణ సంఖ్య.","options":["True / నిజం","False / తప్పు"],"answer":0,"why":"Whole numbers begin at 0: 0, 1, 2, 3, ..."},
-  {"id":9,"subject":"Reasoning","q":"Find the next number: 2, 4, 8, 16, ? / తదుపరి సంఖ్య ఏది?","options":["20","24","30","32"],"answer":3,"why":"Each number is multiplied by 2. / ప్రతి సంఖ్యను 2 తో గుణిస్తున్నాం."},
-  {"id":10,"subject":"Mathematics","q":"The number 1 is a prime number. / 1 ఒక ప్రధాన సంఖ్య.","options":["True / నిజం","False / తప్పు"],"answer":1,"why":"1 has only one positive factor. A prime number must have exactly two."}
+  {
+    "id": 1,
+    "subject": "Mathematics",
+    "q": "Which is the smallest prime number? / అతి చిన్న ప్రధాన సంఖ్య ఏది?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 1,
+    "why": "2 has exactly two positive factors: 1 and 2. / 2 కు 1, 2 అనే రెండు కారణాంకాలు ఉన్నాయి."
+  },
+  {
+    "id": 2,
+    "subject": "Mathematics",
+    "q": "Calculate: 35 + 25 − 10 = ? / లెక్కించండి.",
+    "options": [
+      "40",
+      "45",
+      "50",
+      "60"
+    ],
+    "answer": 2,
+    "why": "35 + 25 = 60; 60 − 10 = 50."
+  },
+  {
+    "id": 3,
+    "subject": "Reasoning",
+    "q": "Find the next number: 5, 10, 15, 20, ? / తదుపరి సంఖ్యను కనుగొనండి.",
+    "options": [
+      "25",
+      "30",
+      "22",
+      "35"
+    ],
+    "answer": 0,
+    "why": "The sequence increases by 5 each time. / ప్రతి సారి 5 కలుపుతున్నాం."
+  },
+  {
+    "id": 4,
+    "subject": "Mathematics",
+    "q": "Which number is divisible by 3? / 3 తో పూర్తిగా భాగించబడే సంఖ్య ఏది?",
+    "options": [
+      "124",
+      "125",
+      "126",
+      "127"
+    ],
+    "answer": 2,
+    "why": "1 + 2 + 6 = 9, and 9 is divisible by 3."
+  },
+  {
+    "id": 5,
+    "subject": "Mathematics",
+    "q": "Calculate: 12 × 4 = ? / గుణించండి.",
+    "options": [
+      "36",
+      "42",
+      "48",
+      "52"
+    ],
+    "answer": 2,
+    "why": "12 × 4 = 48."
+  },
+  {
+    "id": 6,
+    "subject": "Mathematics",
+    "q": "Select all even numbers. / సరి సంఖ్యలను ఎంచుకోండి.",
+    "options": [
+      "14",
+      "17",
+      "22",
+      "29"
+    ],
+    "answers": [
+      0,
+      2
+    ],
+    "why": "14 and 22 are divisible by 2 without a remainder."
+  },
+  {
+    "id": 7,
+    "subject": "Mathematics",
+    "q": "What is 100 ÷ 5? / భాగహారం చేయండి.",
+    "options": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "answer": 2,
+    "why": "5 × 20 = 100, so 100 ÷ 5 = 20."
+  },
+  {
+    "id": 8,
+    "subject": "Mathematics",
+    "q": "Zero is a whole number. / సున్నా ఒక పూర్ణ సంఖ్య.",
+    "options": [
+      "True / నిజం",
+      "False / తప్పు"
+    ],
+    "answer": 0,
+    "why": "Whole numbers begin at 0: 0, 1, 2, 3, ..."
+  },
+  {
+    "id": 9,
+    "subject": "Reasoning",
+    "q": "Find the next number: 2, 4, 8, 16, ? / తదుపరి సంఖ్య ఏది?",
+    "options": [
+      "20",
+      "24",
+      "30",
+      "32"
+    ],
+    "answer": 3,
+    "why": "Each number is multiplied by 2. / ప్రతి సంఖ్యను 2 తో గుణిస్తున్నాం."
+  },
+  {
+    "id": 10,
+    "subject": "Mathematics",
+    "q": "The number 1 is a prime number. / 1 ఒక ప్రధాన సంఖ్య.",
+    "options": [
+      "True / నిజం",
+      "False / తప్పు"
+    ],
+    "answer": 1,
+    "why": "1 has only one positive factor. A prime number must have exactly two."
+  },
+  {
+    "id": 11,
+    "subject": "Mathematics",
+    "q": "What is 25% of 200? / 200 లో 25% ఎంత?",
+    "options": [
+      "25",
+      "40",
+      "50",
+      "75"
+    ],
+    "answer": 2,
+    "why": "25% = 1/4; 200 ÷ 4 = 50."
+  },
+  {
+    "id": 12,
+    "subject": "Mathematics",
+    "q": "Simplify the ratio 12:18. / 12:18 నిష్పత్తిని సరళీకరించండి.",
+    "options": [
+      "2:3",
+      "3:2",
+      "4:5",
+      "6:9"
+    ],
+    "answer": 0,
+    "why": "Divide both terms by their HCF, 6. The ratio is 2:3."
+  },
+  {
+    "id": 13,
+    "subject": "Mathematics",
+    "q": "Find the average of 4, 6 and 8. / 4, 6, 8 సగటు ఎంత?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "why": "Average = (4 + 6 + 8) ÷ 3 = 6."
+  },
+  {
+    "id": 14,
+    "subject": "Mathematics",
+    "q": "An item costs ₹400 and is sold for ₹460. Find the profit. / ₹400 వస్తువును ₹460కి అమ్మితే లాభం ఎంత?",
+    "options": [
+      "₹40",
+      "₹50",
+      "₹60",
+      "₹80"
+    ],
+    "answer": 2,
+    "why": "Profit = selling price − cost price = ₹460 − ₹400 = ₹60."
+  },
+  {
+    "id": 15,
+    "subject": "Mathematics",
+    "q": "A vehicle travels 120 km in 2 hours. What is its speed? / 2 గంటల్లో 120 కి.మీ ప్రయాణిస్తే వేగం ఎంత?",
+    "options": [
+      "40 km/h",
+      "50 km/h",
+      "60 km/h",
+      "80 km/h"
+    ],
+    "answer": 2,
+    "why": "Speed = distance ÷ time = 120 ÷ 2 = 60 km/h."
+  },
+  {
+    "id": 16,
+    "subject": "Mathematics",
+    "q": "Solve: 3x = 21. / 3x = 21 అయితే x విలువ ఎంత?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "why": "Divide both sides by 3: x = 21 ÷ 3 = 7."
+  },
+  {
+    "id": 17,
+    "subject": "Mathematics",
+    "q": "Find the HCF of 12 and 18. / 12 మరియు 18 యొక్క గరిష్ఠ సామాన్య కారకం?",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "12"
+    ],
+    "answer": 1,
+    "why": "The common factors are 1, 2, 3 and 6. The greatest is 6."
+  },
+  {
+    "id": 18,
+    "subject": "Mathematics",
+    "q": "Find the next term: 3, 7, 11, 15, ? / తదుపరి సంఖ్య?",
+    "options": [
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "answer": 2,
+    "why": "Add 4 each time; 15 + 4 = 19."
+  },
+  {
+    "id": 19,
+    "subject": "Mathematics",
+    "q": "What is the area of a rectangle of length 8 cm and width 5 cm? / పొడవు 8 సెం.మీ, వెడల్పు 5 సెం.మీ ఉన్న దీర్ఘచతురస్ర వైశాల్యం?",
+    "options": [
+      "13 cm²",
+      "26 cm²",
+      "40 cm²",
+      "80 cm²"
+    ],
+    "answer": 2,
+    "why": "Area = length × width = 8 × 5 = 40 cm²."
+  },
+  {
+    "id": 20,
+    "subject": "Mathematics",
+    "q": "What is the probability of getting a head in one fair coin toss? / ఒక నాణెం వేస్తే బొమ్మ వచ్చే సంభావ్యత?",
+    "options": [
+      "0",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "answer": 2,
+    "why": "There are two equally likely outcomes; one is a head. Probability = 1/2."
+  },
+  {
+    "id": 21,
+    "subject": "Basic Science",
+    "q": "What is the SI unit of force? / బలం యొక్క SI ప్రమాణం ఏది?",
+    "options": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 1,
+    "why": "Force is measured in newtons (N)."
+  },
+  {
+    "id": 22,
+    "subject": "Basic Science",
+    "q": "Which instrument measures temperature? / ఉష్ణోగ్రతను కొలిచే పరికరం?",
+    "options": [
+      "Barometer",
+      "Thermometer",
+      "Ammeter",
+      "Voltmeter"
+    ],
+    "answer": 1,
+    "why": "A thermometer measures temperature."
+  },
+  {
+    "id": 23,
+    "subject": "Basic Science",
+    "q": "Which energy does a moving object possess? / కదులుతున్న వస్తువుకు ఉండే శక్తి?",
+    "options": [
+      "Kinetic energy",
+      "Potential energy",
+      "Chemical energy",
+      "Nuclear energy"
+    ],
+    "answer": 0,
+    "why": "Energy due to motion is kinetic energy."
+  },
+  {
+    "id": 24,
+    "subject": "Basic Science",
+    "q": "Which device is used to measure electric current? / విద్యుత్ ప్రవాహాన్ని కొలిచే పరికరం?",
+    "options": [
+      "Voltmeter",
+      "Ammeter",
+      "Thermometer",
+      "Barometer"
+    ],
+    "answer": 1,
+    "why": "An ammeter measures electric current."
+  },
+  {
+    "id": 25,
+    "subject": "Basic Science",
+    "q": "Friction generally acts in which direction relative to motion? / ఘర్షణ సాధారణంగా చలనానికి ఏ దిశలో పనిచేస్తుంది?",
+    "options": [
+      "Same direction",
+      "Opposite direction",
+      "Vertically upward only",
+      "No fixed relation"
+    ],
+    "answer": 1,
+    "why": "Friction opposes relative motion between surfaces."
+  },
+  {
+    "id": 26,
+    "subject": "Data Interpretation",
+    "q": "A table shows sales: Mon 10, Tue 15, Wed 5. What is the total? / సోమ 10, మంగళ 15, బుధ 5 అమ్మకాలు. మొత్తం ఎంత?",
+    "options": [
+      "20",
+      "25",
+      "30",
+      "35"
+    ],
+    "answer": 2,
+    "why": "Total = 10 + 15 + 5 = 30."
+  },
+  {
+    "id": 27,
+    "subject": "Data Interpretation",
+    "q": "In a class of 40, 10 students choose science. What percentage is this? / 40 మందిలో 10 మంది సైన్స్ ఎంచుకుంటే శాతం ఎంత?",
+    "options": [
+      "10%",
+      "20%",
+      "25%",
+      "40%"
+    ],
+    "answer": 2,
+    "why": "(10 ÷ 40) × 100 = 25%."
+  },
+  {
+    "id": 28,
+    "subject": "Logical Capability",
+    "q": "All roses are flowers. Which statement must be true? / అన్ని గులాబీలు పూలు. తప్పనిసరిగా నిజమైనది ఏది?",
+    "options": [
+      "All flowers are roses",
+      "Every rose is a flower",
+      "No rose is a flower",
+      "All flowers are red"
+    ],
+    "answer": 1,
+    "why": "This restates the given statement; the reverse is not guaranteed."
+  },
+  {
+    "id": 29,
+    "subject": "Logical Capability",
+    "q": "If today is Monday, what day will it be after 3 days? / ఈ రోజు సోమవారం అయితే 3 రోజుల తర్వాత ఏ రోజు?",
+    "options": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "answer": 2,
+    "why": "Tuesday (1), Wednesday (2), Thursday (3)."
+  },
+  {
+    "id": 30,
+    "subject": "Logical Capability",
+    "q": "A is the brother of B. B is the sister of C. How is A related to C? / A, Bకి సోదరుడు; B, Cకి సోదరి. A, Cకి ఏమవుతాడు?",
+    "options": [
+      "Brother",
+      "Sister",
+      "Father",
+      "Uncle"
+    ],
+    "answer": 0,
+    "why": "A is male and shares the sibling relationship with C, so A is C's brother."
+  },
+  {
+    "id": 31,
+    "subject": "Logical Capability",
+    "q": "Choose the assumption: 'Wear a helmet while riding to reduce head injury.' / హెల్మెట్ ధరించడం తల గాయాన్ని తగ్గిస్తుంది — అంతర్లీన భావన?",
+    "options": [
+      "Helmets can protect the head",
+      "Roads have no traffic",
+      "All riders are doctors",
+      "Helmets increase speed"
+    ],
+    "answer": 0,
+    "why": "The advice assumes helmets provide head protection."
+  },
+  {
+    "id": 32,
+    "subject": "Mental Reasoning",
+    "q": "Book is to Reading as Fork is to ___. / పుస్తకం : చదవడం :: ఫోర్క్ : ___",
+    "options": [
+      "Writing",
+      "Eating",
+      "Drawing",
+      "Sleeping"
+    ],
+    "answer": 1,
+    "why": "A book is used for reading; a fork is used for eating."
+  },
+  {
+    "id": 33,
+    "subject": "Mental Reasoning",
+    "q": "If CAT is coded as DBU (each letter moves one step forward), DOG is coded as? / ప్రతి అక్షరాన్ని ఒకటి ముందుకు మార్చితే DOG కోడ్?",
+    "options": [
+      "EPH",
+      "CNG",
+      "FQI",
+      "EOG"
+    ],
+    "answer": 0,
+    "why": "D→E, O→P and G→H, so DOG becomes EPH."
+  },
+  {
+    "id": 34,
+    "subject": "Mental Reasoning",
+    "q": "Ravi is 5th from the left in a row. What is his position from the left? / వరుసలో ఎడమ నుంచి రవి 5వ స్థానంలో ఉన్నాడు. అతని స్థానం?",
+    "options": [
+      "3rd",
+      "4th",
+      "5th",
+      "6th"
+    ],
+    "answer": 2,
+    "why": "The question states directly that Ravi is fifth from the left."
+  },
+  {
+    "id": 35,
+    "subject": "Mental Reasoning",
+    "q": "Find the odd one out. / భిన్నమైనదాన్ని గుర్తించండి.",
+    "options": [
+      "Circle",
+      "Triangle",
+      "Square",
+      "Cube"
+    ],
+    "answer": 3,
+    "why": "Cube is three-dimensional; the others are two-dimensional shapes."
+  },
+  {
+    "id": 36,
+    "subject": "Reading Comprehension",
+    "q": "Passage: 'Trees absorb carbon dioxide and provide shade.' What is one benefit mentioned? / చెట్లు కార్బన్ డయాక్సైడ్‌ను గ్రహించి నీడనిస్తాయి. చెప్పిన ప్రయోజనం ఏది?",
+    "options": [
+      "They provide shade",
+      "They produce plastic",
+      "They stop all rain",
+      "They increase noise"
+    ],
+    "answer": 0,
+    "why": "The passage explicitly says trees provide shade."
+  },
+  {
+    "id": 37,
+    "subject": "Mathematics",
+    "q": "What is the LCM of 4 and 6? / 4 మరియు 6 యొక్క క.సా.గు. ఎంత?",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "24"
+    ],
+    "answer": 2,
+    "why": "12 is the smallest positive number divisible by both 4 and 6."
+  },
+  {
+    "id": 38,
+    "subject": "Mathematics",
+    "q": "A train covers 150 km in 3 hours. Find its average speed. / రైలు 3 గంటల్లో 150 కి.మీ వెళితే సగటు వేగం?",
+    "options": [
+      "30 km/h",
+      "40 km/h",
+      "50 km/h",
+      "60 km/h"
+    ],
+    "answer": 2,
+    "why": "Average speed = 150 ÷ 3 = 50 km/h."
+  },
+  {
+    "id": 39,
+    "subject": "Basic Science",
+    "q": "What is the SI unit of power? / శక్తి (Power) యొక్క SI ప్రమాణం?",
+    "options": [
+      "Watt",
+      "Newton",
+      "Metre",
+      "Kelvin"
+    ],
+    "answer": 0,
+    "why": "Power is measured in watts (W)."
+  },
+  {
+    "id": 40,
+    "subject": "Data Interpretation",
+    "q": "A pie chart represents 50 people. If a sector is 20% of the chart, how many people does it represent? / 50 మందిలో 20% ఎంతమంది?",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "answer": 1,
+    "why": "20% of 50 = 10."
+  }
 ]
