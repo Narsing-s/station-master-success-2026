@@ -3,18 +3,28 @@ on:
   schedule:
     - cron: "0 */2 * * *"
   workflow_dispatch:
+concurrency:
+  group: station-master-study-email
+  cancel-in-progress: false
 permissions:
   contents: read
 jobs:
   send-study-email:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Restore sent-question history
+        uses: actions/cache/restore@v4
+        with:
+          path: .email-state/
+          key: station-master-email-state-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            station-master-email-state-
       - name: Check email credentials
         env:
           STUDY_GMAIL_USER: ${{ secrets.STUDY_GMAIL_USER }}
@@ -22,9 +32,14 @@ jobs:
         run: |
           test -n "$STUDY_GMAIL_USER" || { echo "::error::Missing STUDY_GMAIL_USER repository secret"; exit 1; }
           test -n "$STUDY_GMAIL_APP_PASSWORD" || { echo "::error::Missing STUDY_GMAIL_APP_PASSWORD repository secret"; exit 1; }
-      - name: Send randomized bilingual practice email
+      - name: Send 100-question bilingual practice email
         env:
           STUDY_GMAIL_USER: ${{ secrets.STUDY_GMAIL_USER }}
           STUDY_GMAIL_APP_PASSWORD: ${{ secrets.STUDY_GMAIL_APP_PASSWORD }}
           STUDY_TO_EMAIL: narsingbeesetti006@gmail.com
         run: python scripts/send-study-email.py
+      - name: Save sent-question history
+        uses: actions/cache/save@v4
+        with:
+          path: .email-state/
+          key: station-master-email-state-${{ github.run_id }}-${{ github.run_attempt }}
