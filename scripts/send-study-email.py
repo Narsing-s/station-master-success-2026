@@ -152,6 +152,25 @@ def generated_questions():
         ("General Awareness", "What does the abbreviation RRB stand for in railway recruitment? / రైల్వే నియామకాల్లో RRB పూర్తి రూపం ఏమిటి?", ["Railway Recruitment Board", "Railway Regulation Bureau", "Regional Rail Branch", "Railway Reservation Board"], 0, "RRB stands for Railway Recruitment Board. / RRB అంటే Railway Recruitment Board."),
         ("General Awareness", "Which gauge is commonly used by Indian Railways on its main routes? / భారతీయ రైల్వే ప్రధాన మార్గాల్లో సాధారణంగా ఉపయోగించే గేజ్ ఏది?", ["Broad gauge", "Metre gauge", "Narrow gauge", "Standard gauge"], 0, "Indian Railways predominantly uses broad gauge on its main network. / భారతీయ రైల్వే ప్రధాన నెట్‌వర్క్‌లో ఎక్కువగా బ్రాడ్ గేజ్ ఉపయోగిస్తుంది."),
     ]
+    extra_facts = [
+        ("Railway Awareness", "What does a red railway signal generally instruct a train to do? / ఎరుపు రైల్వే సిగ్నల్ ఏమి సూచిస్తుంది?", ["Stop", "Proceed", "Increase speed", "Change platform"], 0, "A red signal generally indicates stop. / ఎరుపు సిగ్నల్ ఆగాలని సూచిస్తుంది."),
+        ("Railway Awareness", "Which component supports rails and helps maintain track gauge? / పట్టాలకు ఆధారం ఇచ్చి గేజ్‌ను నిలబెట్టే భాగం ఏది?", ["Sleepers", "Pantograph", "Buffer", "Coupler"], 0, "Sleepers support rails and help maintain the gauge. / స్లీపర్లు పట్టాలకు ఆధారం ఇచ్చి గేజ్‌ను నిలబెడతాయి."),
+        ("Railway Awareness", "What is the main function of a locomotive? / లోకోమోటివ్ ప్రధాన పని ఏమిటి?", ["Provide traction to move a train", "Issue tickets", "Clean platforms", "Measure rainfall"], 0, "A locomotive provides the tractive effort to move a train. / రైలును నడిపేందుకు లోకోమోటివ్ ట్రాక్షన్ అందిస్తుంది."),
+        ("Railway Awareness", "Which device collects power from overhead wires on an electric train? / ఎలక్ట్రిక్ రైలులో ఓవర్‌హెడ్ వైర్ నుంచి విద్యుత్‌ను సేకరించేది ఏది?", ["Pantograph", "Axle", "Brake shoe", "Sleeper"], 0, "The pantograph collects electric power from overhead equipment. / పాంటోగ్రాఫ్ ఓవర్‌హెడ్ లైన్ నుంచి విద్యుత్‌ను సేకరిస్తుంది."),
+        ("Railway Awareness", "What is the purpose of railway points and crossings? / రైల్వే పాయింట్లు, క్రాసింగ్స్ ఉద్దేశ్యం ఏమిటి?", ["Divert trains between tracks", "Sell tickets", "Clean coaches", "Measure temperature"], 0, "Points and crossings guide trains from one track to another. / రైళ్లను ఒక ట్రాక్ నుంచి మరొక ట్రాక్‌కు మళ్లిస్తాయి."),
+        ("Railway Awareness", "What does a railway block section help ensure? / రైల్వే బ్లాక్ సెక్షన్ ప్రధానంగా దేనికి సహాయపడుతుంది?", ["Safe separation of trains", "Passenger catering", "Ticket printing", "Coach painting"], 0, "Block working helps maintain safe separation between trains. / రైళ్ల మధ్య సురక్షిత దూరాన్ని నిర్వహించడంలో బ్లాక్ విధానం సహాయపడుతుంది."),
+        ("Railway Awareness", "Which department maintains railway signalling and interlocking equipment? / రైల్వే సిగ్నలింగ్, ఇంటర్‌లాకింగ్ పరికరాలను ఏ విభాగం నిర్వహిస్తుంది?", ["Signal and Telecommunications", "Accounts", "Medical", "Catering"], 0, "The S&T department maintains signalling and communication systems. / S&T విభాగం సిగ్నలింగ్, కమ్యూనికేషన్ వ్యవస్థలను నిర్వహిస్తుంది."),
+        ("Railway Awareness", "What is the purpose of a railway level crossing gate? / రైల్వే లెవల్ క్రాసింగ్ గేట్ ఉద్దేశ్యం ఏమిటి?", ["Control road traffic when trains pass", "Increase train speed", "Refuel locomotives", "Issue platform tickets"], 0, "The gate protects the crossing by controlling road traffic. / రైలు వెళ్లేటప్పుడు రోడ్డు రాకపోకలను నియంత్రించి భద్రత కల్పిస్తుంది."),
+        ("Computer & Environment", "What does CPU stand for? / CPU పూర్తి రూపం ఏమిటి?", ["Central Processing Unit", "Computer Personal Unit", "Central Program Utility", "Control Power Unit"], 0, "CPU stands for Central Processing Unit. / CPU అంటే Central Processing Unit."),
+        ("Computer & Environment", "Which computer memory is volatile? / ఏ కంప్యూటర్ మెమరీ volatile?", ["RAM", "ROM", "SSD", "DVD"], 0, "RAM is volatile and loses its contents when power is removed. / విద్యుత్ ఆపినప్పుడు RAM లోని తాత్కాలిక డేటా పోతుంది."),
+        ("Computer & Environment", "Which of these is an operating system? / వీటిలో operating system ఏది?", ["Linux", "HTML", "SQL", "HTTP"], 0, "Linux is an operating system. / Linux ఒక ఆపరేటింగ్ సిస్టమ్."),
+        ("Computer & Environment", "What is the full form of URL? / URL పూర్తి రూపం ఏమిటి?", ["Uniform Resource Locator", "Universal Record Link", "Unified Routing Language", "User Reference Location"], 0, "URL stands for Uniform Resource Locator. / URL అంటే Uniform Resource Locator."),
+        ("Computer & Environment", "Which protocol is commonly used for secure websites? / సురక్షిత వెబ్‌సైట్లకు సాధారణంగా ఉపయోగించే ప్రోటోకాల్ ఏది?", ["HTTPS", "FTP", "SMTP", "Telnet"], 0, "HTTPS encrypts communication between a browser and a website. / HTTPS బ్రౌజర్ మరియు వెబ్‌సైట్ మధ్య సమాచారాన్ని గుప్తీకరిస్తుంది."),
+        ("Computer & Environment", "Which gas is a major greenhouse gas released by burning fossil fuels? / శిలాజ ఇంధనాల దహనంతో విడుదలయ్యే ప్రధాన గ్రీన్‌హౌస్ వాయువు ఏది?", ["Carbon dioxide", "Helium", "Neon", "Argon"], 0, "Burning fossil fuels releases carbon dioxide. / శిలాజ ఇంధనాల దహనంతో కార్బన్ డయాక్సైడ్ విడుదలవుతుంది."),
+        ("Computer & Environment", "Which is a renewable source of energy? / పునరుత్పాదక శక్తి వనరు ఏది?", ["Solar energy", "Coal", "Petroleum", "Natural gas"], 0, "Solar energy is renewable. / సౌరశక్తి పునరుత్పాదక శక్తి."),
+        ("Computer & Environment", "Which layer absorbs much of the Sun's harmful ultraviolet radiation? / సూర్యుని హానికర UV కిరణాలను ఎక్కువగా గ్రహించే పొర ఏది?", ["Ozone layer", "Earth's core", "Mantle", "Crust"], 0, "The ozone layer absorbs much of the Sun's harmful UV radiation. / ఓజోన్ పొర హానికర UV కిరణాలను ఎక్కువగా గ్రహిస్తుంది.")
+    ]
+    facts.extend(extra_facts)
     for subject, q, options, answer, why in facts:
         bank.append(make_question(subject, q, options, answer, why))
 
@@ -194,21 +213,73 @@ def answer_label(q):
     return letters, answer_text
 
 
+def subject_bucket(subject):
+    name = subject.strip().lower()
+    if "math" in name or "data interpretation" in name:
+        return "Mathematics"
+    if any(word in name for word in ("reason", "logical", "mental")):
+        return "Reasoning"
+    if "science" in name:
+        return "General Science"
+    if "railway" in name:
+        return "Railway Awareness"
+    if "computer" in name or "environment" in name:
+        return "Computer & Environment"
+    return "General Awareness"
+
+
+def balanced_sample(bank, used):
+    groups = {}
+    for q in bank:
+        groups.setdefault(subject_bucket(q.get("subject", "")), []).append(q)
+    order = ["Mathematics", "Reasoning", "General Science", "General Awareness",
+             "Railway Awareness", "Computer & Environment"]
+    pools = {}
+    reset_groups = []
+    for name in order:
+        group = groups.get(name, [])
+        fresh = [q for q in group if q["id"] not in used]
+        if len(fresh) < min(8, len(group)):
+            fresh = group[:]
+            reset_groups.append(name)
+        pools[name] = fresh
+    if sum(len(pools[n]) for n in order) < QUESTION_COUNT:
+        raise SystemExit("The syllabus question bank has fewer than 100 available questions.")
+    quotas = {name: min(8, len(pools[name])) for name in order}
+    remaining = QUESTION_COUNT - sum(quotas.values())
+    # Distribute the remaining questions round-robin so large Maths pools
+    # cannot dominate the paper. Every syllabus category gets representation.
+    while remaining:
+        moved = False
+        for name in order:
+            if quotas[name] < len(pools[name]):
+                quotas[name] += 1
+                remaining -= 1
+                moved = True
+                if not remaining:
+                    break
+        if not moved:
+            raise SystemExit("Unable to fill a balanced 100-question paper; expand the syllabus bank.")
+    rng = random.SystemRandom()
+    chosen = []
+    next_used = set(used)
+    counts = {}
+    for name in order:
+        batch = rng.sample(pools[name], quotas[name])
+        chosen.extend(batch)
+        next_used.update(q["id"] for q in batch)
+        counts[name] = len(batch)
+    rng.shuffle(chosen)
+    return chosen, next_used, reset_groups, counts
+
+
 def main():
     bank = load_bank()
     if len(bank) < QUESTION_COUNT:
         raise SystemExit(f"Question pool has only {len(bank)} unique questions; at least {QUESTION_COUNT} are required.")
 
     used = load_used_ids()
-    available = [q for q in bank if q["id"] not in used]
-    cycle_reset = False
-    if len(available) < QUESTION_COUNT:
-        used = set()
-        available = bank[:]
-        cycle_reset = True
-
-    questions = random.SystemRandom().sample(available, QUESTION_COUNT)
-    used.update(q["id"] for q in questions)
+    questions, used, reset_groups, subject_counts = balanced_sample(bank, used)
 
     now = datetime.now(timezone.utc).astimezone()
     stamp = now.strftime("%d %b %Y, %I:%M %p %Z")
@@ -283,9 +354,9 @@ def main():
         server.send_message(msg)
 
     save_used_ids(used)
-    print(f"Sent {QUESTION_COUNT} questions to {msg['To']}. Pool size: {len(bank)}. Fresh questions remaining this cycle: {len(bank) - len(used)}.")
-    if cycle_reset:
-        print("The unique-question pool was exhausted; a new cycle has started.")
+    print(f"Sent {QUESTION_COUNT} balanced questions to {msg['To']}. Pool size: {len(bank)}. Subject counts: {subject_counts}.")
+    if reset_groups:
+        print("Question cycle refreshed for exhausted categories: " + ", ".join(reset_groups))
 
 
 if __name__ == "__main__":
