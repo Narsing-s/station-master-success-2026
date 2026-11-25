@@ -1,0 +1,22 @@
+name: Send Station Master Study Email
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  send-study-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Send randomized bilingual practice email
+        env:
+          STUDY_GMAIL_USER: ${{ secrets.STUDY_GMAIL_USER }}
+          STUDY_GMAIL_APP_PASSWORD: ${{ secrets.STUDY_GMAIL_APP_PASSWORD }}
+          STUDY_TO_EMAIL: narsingbeesetti006@gmail.com
+        run: python scripts/send-study-email.py
