@@ -3,6 +3,7 @@
 Beginner-friendly RRB Station Master preparation starter for CEN 08/2026.
 
 ## Included
+- CEN 08/2026 CBT pattern and syllabus overview from the user-provided notification page
 - Day 1 English + Telugu fundamentals
 - 10-question interactive quiz with scoring and explanations
 - Responsive static website; no API keys, database, or paid service required
