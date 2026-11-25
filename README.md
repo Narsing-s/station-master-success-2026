@@ -23,3 +23,17 @@ Add `data/day-02.json` following the same question structure and extend the less
 
 ## Important
 This is an independent study aid, not an official RRB website. Confirm recruitment rules, exam pattern, dates, eligibility, and medical standards from the official CEN 08/2026 notification and RRB website.
+## Automatic study emails (every 4 hours)
+
+The `.github/workflows/study-email.yml` workflow sends a fresh random set of 10 bilingual questions from the question bank every four hours (UTC schedule; GitHub may start scheduled runs a little later). It also supports manual runs from Actions → Send Station Master Study Email → Run workflow.
+
+### One-time Gmail setup
+1. Enable 2-Step Verification on the Gmail account you will send from.
+2. Create a Google App Password for this workflow (do not use your normal Gmail password).
+3. In this repository, open Settings → Secrets and variables → Actions → New repository secret.
+4. Add these two secrets:
+   - `STUDY_GMAIL_USER` — your sending Gmail address.
+   - `STUDY_GMAIL_APP_PASSWORD` — the 16-character Google App Password.
+5. Open Actions → Send Station Master Study Email → Run workflow to test the first email.
+
+The email is sent to the same address configured in the workflow. Never commit your Gmail password or App Password to the repository. If the secrets are missing or invalid, the email workflow will fail rather than expose credentials.
