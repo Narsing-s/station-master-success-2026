@@ -217,9 +217,9 @@ def main():
             f"<h3 style='font-size:16px;line-height:1.5;margin:8px 0'>{html.escape(q['q'])}</h3><ol type='A' style='padding-left:24px;line-height:1.7'>"
         )
         plain.append(f"Q{i:03d}. [{subject}] {q['q']}")
-        for option in q["options"]:
+        for option_index, option in enumerate(q["options"]):
             parts.append(f"<li style='padding:2px 0'>{html.escape(str(option))}</li>")
-            plain.append(f"    {chr(65 + q['options'].index(option))}. {option}")
+            plain.append(f"    {chr(65 + option_index)}. {option}")
         parts.append("</ol></section>")
         plain.append("")
 
