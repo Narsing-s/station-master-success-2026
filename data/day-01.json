@@ -1,0 +1,12 @@
+[
+  {"id":1,"subject":"Mathematics","q":"Which is the smallest prime number? / అతి చిన్న ప్రధాన సంఖ్య ఏది?","options":["1","2","3","4"],"answer":1,"why":"2 has exactly two positive factors: 1 and 2. / 2 కు 1, 2 అనే రెండు కారణాంకాలు ఉన్నాయి."},
+  {"id":2,"subject":"Mathematics","q":"Calculate: 35 + 25 − 10 = ? / లెక్కించండి.","options":["40","45","50","60"],"answer":2,"why":"35 + 25 = 60; 60 − 10 = 50."},
+  {"id":3,"subject":"Reasoning","q":"Find the next number: 5, 10, 15, 20, ? / తదుపరి సంఖ్యను కనుగొనండి.","options":["25","30","22","35"],"answer":0,"why":"The sequence increases by 5 each time. / ప్రతి సారి 5 కలుపుతున్నాం."},
+  {"id":4,"subject":"Mathematics","q":"Which number is divisible by 3? / 3 తో పూర్తిగా భాగించబడే సంఖ్య ఏది?","options":["124","125","126","127"],"answer":2,"why":"1 + 2 + 6 = 9, and 9 is divisible by 3."},
+  {"id":5,"subject":"Mathematics","q":"Calculate: 12 × 4 = ? / గుణించండి.","options":["36","42","48","52"],"answer":2,"why":"12 × 4 = 48."},
+  {"id":6,"subject":"Mathematics","q":"Select all even numbers. / సరి సంఖ్యలను ఎంచుకోండి.","options":["14","17","22","29"],"answers":[0,2],"why":"14 and 22 are divisible by 2 without a remainder."},
+  {"id":7,"subject":"Mathematics","q":"What is 100 ÷ 5? / భాగహారం చేయండి.","options":["10","15","20","25"],"answer":2,"why":"5 × 20 = 100, so 100 ÷ 5 = 20."},
+  {"id":8,"subject":"Mathematics","q":"Zero is a whole number. / సున్నా ఒక పూర్ణ సంఖ్య.","options":["True / నిజం","False / తప్పు"],"answer":0,"why":"Whole numbers begin at 0: 0, 1, 2, 3, ..."},
+  {"id":9,"subject":"Reasoning","q":"Find the next number: 2, 4, 8, 16, ? / తదుపరి సంఖ్య ఏది?","options":["20","24","30","32"],"answer":3,"why":"Each number is multiplied by 2. / ప్రతి సంఖ్యను 2 తో గుణిస్తున్నాం."},
+  {"id":10,"subject":"Mathematics","q":"The number 1 is a prime number. / 1 ఒక ప్రధాన సంఖ్య.","options":["True / నిజం","False / తప్పు"],"answer":1,"why":"1 has only one positive factor. A prime number must have exactly two."}
+]
