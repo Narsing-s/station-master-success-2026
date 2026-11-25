@@ -15,11 +15,32 @@ SITE = "https://narsing-s.github.io/station-master-success-2026/"
 
 def make_question(subject, question, options, answer, why):
     key = hashlib.sha256(question.encode("utf-8")).hexdigest()[:20]
+    values = [str(x) for x in options]
+    # Keep four distinct choices and avoid making every generated answer option A.
+    if len(values) == 4:
+        clean = [values[0]]
+        for value in values[1:]:
+            if value not in clean:
+                clean.append(value)
+        filler = 1
+        while len(clean) < 4:
+            try:
+                candidate = str(int(values[0]) + 100 + filler)
+            except ValueError:
+                candidate = f"Alternative {filler}"
+            if candidate not in clean:
+                clean.append(candidate)
+            filler += 1
+        correct = values[answer]
+        rng = random.Random(key)
+        rng.shuffle(clean)
+        answer = clean.index(correct)
+        values = clean
     return {
         "id": key,
         "subject": subject,
         "q": question,
-        "options": [str(x) for x in options],
+        "options": values,
         "answer": answer,
         "why": why,
     }
