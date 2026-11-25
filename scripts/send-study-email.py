@@ -27,7 +27,7 @@ for i, q in enumerate(questions, 1):
 parts.append("<hr><h2>Answer key and explanations</h2>")
 plain.extend(["", "ANSWER KEY & EXPLANATIONS"])
 for i, q in enumerate(questions, 1):
-    indexes = q.get("answers", [q["answer"]])
+    indexes = q["answers"] if "answers" in q else [q["answer"]]
     letters = ", ".join(chr(65 + n) for n in indexes)
     answer_text = ", ".join(q["options"][n] for n in indexes)
     why = q.get("why", "")
