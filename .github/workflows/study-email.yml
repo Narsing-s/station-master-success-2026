@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/study-email.yml"
+      - "scripts/send-study-email.py"
   schedule:
     - cron: "0 */2 * * *"
   workflow_dispatch:
