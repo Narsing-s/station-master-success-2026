@@ -220,8 +220,9 @@ def main():
         "<p><b>Instructions:</b> Attempt all 100 questions first. Each question carries 1 mark. Check the answer key and explanation section only after completing the paper. This practice paper does not apply an official negative-marking scheme.</p>",
         "<p><b>Sections:</b> Mathematics · Reasoning · Basic Science · General Awareness · Railway Awareness</p>",
         "<hr style='border:0;border-top:1px solid #dce3ee'>",
-        "<nav style='display:flex;gap:10px;margin:18px 0 22px'><a href='#questions' style='display:inline-block;background:#173b67;color:#fff;text-decoration:none;padding:11px 18px;border-radius:8px;font-weight:bold'>Questions / ప్రశ్నలు</a><a href='#answers' style='display:inline-block;background:#e8f0fa;color:#173b67;text-decoration:none;padding:11px 18px;border:1px solid #c8d7e8;border-radius:8px;font-weight:bold'>Answers & explanations / సమాధానాలు</a></nav>",
-        "<div id='questions'>",
+        "<h2 style='margin:18px 0 8px'>Quick answer table / సమాధానాల పట్టిక (spoiler)</h2>",
+        "<p style='font-size:12px;color:#52657c'>Answers are listed here for quick access; detailed explanations follow the questions. / సమాధానాలు ఇక్కడ ఉన్నాయి.</p>",
+        "<table role='table' cellpadding='7' cellspacing='0' style='width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px'><thead><tr style='background:#e8f0fa'><th align='left'>Question</th><th align='left'>Correct answer</th></tr></thead><tbody>",
     ]
     plain = [
         "STATION MASTER SUCCESS 2026",
@@ -232,6 +233,12 @@ def main():
         "",
     ]
 
+    for i, q in enumerate(questions, 1):
+        letters, answer_text = answer_label(q)
+        parts.append(f"<tr style='border-bottom:1px solid #dce3ee'><td>Q{i:03d}</td><td><b>{html.escape(letters)}</b> — {html.escape(answer_text)}</td></tr>")
+        plain.append(f"Q{i:03d}: {letters} — {answer_text}")
+    parts.append("</tbody></table><hr style='border:0;border-top:1px solid #dce3ee'><h2 id='questions'>Questions / ప్రశ్నలు</h2>")
+    plain.extend(["", "QUESTIONS / ప్రశ్నలు", ""])
     for i, q in enumerate(questions, 1):
         subject = q.get("subject", "Practice")
         parts.append(
@@ -246,7 +253,7 @@ def main():
         parts.append("</ol></section>")
         plain.append("")
 
-    parts.append("</div><div id='answers' style='background:#eef4fb;padding:16px;margin-top:22px;border-radius:10px'><h2 style='margin:0'>Answer key & explanations / సమాధానాలు మరియు వివరణలు</h2><p style='margin:8px 0 0'><a href='#questions' style='color:#173b67'>↑ Back to questions / ప్రశ్నలకు తిరిగి వెళ్లండి</a></p></div>")
+    parts.append("<div style='background:#eef4fb;padding:16px;margin-top:22px;border-radius:10px'><h2 style='margin:0'>Detailed explanations / వివరణలు</h2></div>")
     plain.extend(["", "ANSWER KEY & EXPLANATIONS / సమాధానాలు మరియు వివరణలు", ""])
     for i, q in enumerate(questions, 1):
         letters, answer_text = answer_label(q)
